@@ -4,7 +4,7 @@ import { CartIcon, ClearCartIcon } from './Icons.jsx'
 import { useCart } from "../hooks/useCart";
 
 
-function CartItem({ thumbnail, price, title, quantity, addToCart }) {
+function CartItem({ thumbnail, price, title, quantity, description, addToCart }) {
     return (
         <li>
             <img 

@@ -23,6 +23,7 @@ export function Products ({ products }) {
               />
               <div>
                 <strong>{product.title}</strong> - ${product.price}
+                <p>{product.description}</p>
               </div>
               <div>
                 <button

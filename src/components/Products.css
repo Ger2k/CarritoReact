@@ -45,3 +45,7 @@
     object-fit: cover;
     background: #fff;
   }
+  .products p{
+    font-size: 0.8em;
+    text-align: left;
+  }
