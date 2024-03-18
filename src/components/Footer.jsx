@@ -8,7 +8,7 @@ export function Footer () {
 
   return (
     <footer className='footer'>
-      <h4>Practica prueba técnica de React</h4>
+      <h4>Práctica prueba técnica de React</h4>
       <h5>Shopping Cart con useContext</h5>
     </footer>
   )
