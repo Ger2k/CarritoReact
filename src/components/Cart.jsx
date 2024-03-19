@@ -1,10 +1,10 @@
 import "./Cart.css"
-import { useId } from "react";
+import { useId,useState,useEffect } from "react";
 import { CartIcon, ClearCartIcon } from './Icons.jsx'
 import { useCart } from "../hooks/useCart";
 
 
-function CartItem({ thumbnail, price, title, quantity, description, addToCart }) {
+function CartItem({ thumbnail, price, title, quantity, addToCart }) {
     return (
         <li>
             <img 
@@ -29,6 +29,13 @@ export function Cart () {
     const cartCheckboxId = useId()
     const { cart,clearCart, addToCart } = useCart()
 
+    const [totalPrice, setTotalPrice] = useState(0)
+
+    useEffect(() => {
+        const total = cart.reduce((acc, product) => acc + product.price * product.quantity, 0);
+        setTotalPrice(total);
+    }, [cart]);
+
     return (
     <>
         <label className="cart-button" htmlFor={cartCheckboxId} >
@@ -45,6 +52,7 @@ export function Cart () {
                     />
                 ))}
             </ul>
+            <p>Total: {totalPrice}$</p>
             <button onClick={clearCart}>
                 <ClearCartIcon />
             </button>
