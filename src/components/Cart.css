@@ -52,6 +52,7 @@
   }
   
   .cart-button ~ input:checked ~ .cart {
+    overflow-y: auto;
     height: 100%;
     display: block;
     animation: cartPopIn 0.5s ease-out forwards;
