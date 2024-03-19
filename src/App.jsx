@@ -6,7 +6,7 @@ import { IS_DEVELOPMENT } from './config.js'
 import { useFilters } from './hooks/useFilters.js'
 import { Cart } from './components/Cart.jsx'
 import { CartProvider } from './context/cart.jsx'
-
+import { Background } from './components/Background.jsx'
 
 function App() {
   const { filterProducts } = useFilters()
@@ -15,6 +15,7 @@ function App() {
 
   return (
     <CartProvider>
+      <Background />
       <Header />
       <Cart />
       <Products products={filteredProducts} />
