@@ -21,11 +21,11 @@ export function Products ({ products }) {
                 src={product.thumbnail}
                 alt={product.title}
               />
-              <div>
+              <div className='descripcionItem'>
                 <strong>{product.title}</strong> - ${product.price}
                 <p>{product.description}</p>
               </div>
-              <div>
+              <div className='addBoton'>
                 <button
                   style={{ backgroundColor: isProductInCart ? 'red' : '#09f' }} onClick={() => {
                     isProductInCart
